@@ -1,0 +1,24 @@
+.stats {
+  display: flex;
+  background-color: #f1f1f1;
+}
+.statsItem {
+  height: 100px;
+  width: calc(100% / 3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border-top: 1px solid #c0c0c0;
+}
+.statsItem:not(:last-child) {
+  border-right: 1px solid #c0c0c0;
+}
+.label {
+  color: #727272;
+  letter-spacing: -0.6px;
+}
+.quantity {
+  font-weight: 700;
+}
