@@ -1,20 +1,24 @@
-import './Description.module.css';
-import css from './Description.module.css';
+import {
+  Container,
+  Avatar,
+  Username,
+  Tag,
+  Location,
+} from './Description.styled';
 
-const Description = ({ username, tag, location, avatar }) => {
+const Description = ({
+  username,
+  tag,
+  location,
+  avatar = 'https://dummyimage.com/480x480/2a2a2a/ffffff&text=Product+image+placeholder',
+}) => {
   return (
-    <div className={css.description}>
-      <img
-        src={avatar}
-        alt="User avatar"
-        className={css.avatar}
-        width={150}
-        height={150}
-      />
-      <h3 className={css.name}>{username}</h3>
-      <p className={css.tag}>@{tag}</p>
-      <p className={css.location}>{location}</p>
-    </div>
+    <Container>
+      <Avatar src={avatar} alt="User avatar" width={150} />
+      <Username>{username}</Username>
+      <Tag>@{tag}</Tag>
+      <Location>{location}</Location>
+    </Container>
   );
 };
 

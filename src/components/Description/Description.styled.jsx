@@ -1,26 +1,32 @@
-.description {
+import styled from '@emotion/styled';
+
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 12px;
   margin-bottom: 30px;
-}
-.avatar {
+`;
+
+export const Avatar = styled.img`
   border-radius: 50%;
   border: 3px solid #010101;
   background: #fff;
-}
-.name {
+`;
+
+export const Username = styled.h3`
   line-height: 1.29;
   font-size: 1.6em;
-}
-.tag {
+`;
+
+export const Tag = styled.p`
   color: #727272;
-}
-.location {
+`;
+
+export const Location = styled.p`
   font-size: 1.05em;
   line-height: 1.11;
   letter-spacing: -0.5px;
   color: #727272;
-}
+`;

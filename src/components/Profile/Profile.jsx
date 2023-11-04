@@ -1,11 +1,11 @@
 import Description from 'components/Description/Description';
 import Stats from 'components/Stats/Stats';
 import user from 'JSON/user.json';
-import css from './Profile.module.css';
+import { Wrapper } from './Profile.styled';
 
 const Profile = () => {
   return (
-    <div className={css.profileWrapper}>
+    <Wrapper>
       <Description
         avatar={user.avatar}
         username={user.username}
@@ -17,7 +17,7 @@ const Profile = () => {
         views={user.stats.views}
         likes={user.stats.likes}
       ></Stats>
-    </div>
+    </Wrapper>
   );
 };
 

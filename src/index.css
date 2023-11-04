@@ -1,9 +1,5 @@
 @import-normalize;
 
-/* @import url(./components/Description/Description.module.css);
-@import url(./components/Profile/Profile.module.css);
-@import url(./components/Stats/Stats.module.css); */
-
 body {
   background-color: #c0c0c0;
   margin: 0;
@@ -65,29 +61,4 @@ fieldset {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-.container {
-  margin: 0 auto;
-  max-width: 335px;
-  padding: 20px;
-}
-
-@media screen and (min-width: 375px) {
-  .container {
-    max-width: 375px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-    padding: 60px 32px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .container {
-    max-width: 1440px;
-  }
 }

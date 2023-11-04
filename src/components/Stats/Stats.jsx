@@ -1,22 +1,21 @@
-import './Stats.module.css';
-import css from './Stats.module.css';
+import { StatsList, StatsItem, Label, Quantity } from './Stats.styled';
 
 const Stats = ({ followers, views, likes }) => {
   return (
-    <ul className={css.stats}>
-      <li className={css.statsItem}>
-        <span className={css.label}>Followers</span>
-        <span className={css.quantity}>{followers}</span>
-      </li>
-      <li className={css.statsItem}>
-        <span className={css.label}>Views</span>
-        <span className={css.quantity}>{views}</span>
-      </li>
-      <li className={css.statsItem}>
-        <span className={css.label}>Likes</span>
-        <span className={css.quantity}>{likes}</span>
-      </li>
-    </ul>
+    <StatsList>
+      <StatsItem>
+        <Label>Followers</Label>
+        <Quantity>{followers}</Quantity>
+      </StatsItem>
+      <StatsItem>
+        <Label>Views</Label>
+        <Quantity>{views}</Quantity>
+      </StatsItem>
+      <StatsItem>
+        <Label>Likes</Label>
+        <Quantity>{likes}</Quantity>
+      </StatsItem>
+    </StatsList>
   );
 };
 
