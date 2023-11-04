@@ -37,7 +37,7 @@ export const StatItem = styled.li`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 4px;
   background-color: ${getRandomHexColor};
   @media (min-width: 768px) {
     width: calc(100% / 5);
@@ -45,11 +45,10 @@ export const StatItem = styled.li`
 `;
 
 export const Label = styled.span`
-  font-size: 12px;
   color: #fff;
 `;
 
 export const Percentage = styled.span`
-  font-size: 26px;
+  font-size: 24px;
   color: #fff;
 `;

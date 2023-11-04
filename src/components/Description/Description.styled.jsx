@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { theme } from 'constants/theme';
 
 export const Container = styled.div`
   display: flex;
@@ -21,12 +22,12 @@ export const Username = styled.h3`
 `;
 
 export const Tag = styled.p`
-  color: #727272;
+  color: ${theme.colors.fontGray};
 `;
 
 export const Location = styled.p`
   font-size: 1.05em;
   line-height: 1.11;
   letter-spacing: -0.5px;
-  color: #727272;
+  color: ${theme.colors.fontGray};
 `;
