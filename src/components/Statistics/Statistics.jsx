@@ -1,12 +1,10 @@
-import StatisticsTitle from 'components/StatisticsTitle/StatisticsTitle';
 import StatisticsItem from 'components/StatisticsItem/StatisticsItem';
-import data from 'JSON/data.json';
-import { Section, List } from './Statistics.styled';
+import { Title, Section, List } from './Statistics.styled';
 
-const Statistics = () => {
+const Statistics = ({ title, data }) => {
   return (
     <Section>
-      <StatisticsTitle title="Upload stats" />
+      {title && <Title>{title}</Title>}
 
       <List>
         {data.map(({ id, label, percentage }) => (

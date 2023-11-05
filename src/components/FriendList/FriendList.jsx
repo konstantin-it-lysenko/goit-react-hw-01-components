@@ -1,16 +1,15 @@
 import FriendListItem from 'components/FriendListItem/FriendListItem';
 import { Friends } from './FriendList.styled';
-import friends from 'JSON/friends.json';
 
-const FriendList = () => {
+const FriendList = ({ friends }) => {
   return (
     <Friends>
-      {friends.map(friend => (
+      {friends.map(({ id, avatar, name, isOnline }) => (
         <FriendListItem
-          key={friend.id}
-          status={friend.isOnline}
-          avatar={friend.avatar}
-          name={friend.name}
+          key={id}
+          status={isOnline}
+          avatar={avatar}
+          name={name}
         />
       ))}
     </Friends>

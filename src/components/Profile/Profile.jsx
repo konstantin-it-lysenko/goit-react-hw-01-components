@@ -1,22 +1,45 @@
-import Description from 'components/Description/Description';
-import Stats from 'components/Stats/Stats';
-import user from 'JSON/user.json';
-import { Wrapper } from './Profile.styled';
+import {
+  Wrapper,
+  Container,
+  Avatar,
+  Username,
+  Tag,
+  Location,
+  StatsList,
+  StatsItem,
+  Label,
+  Quantity,
+} from './Profile.styled';
 
-const Profile = () => {
+const Profile = ({
+  avatar = 'https://dummyimage.com/480x480/2a2a2a/ffffff&text=Product+image+placeholder',
+  username,
+  tag,
+  location,
+  stats: { followers, views, likes },
+}) => {
   return (
     <Wrapper>
-      <Description
-        avatar={user.avatar}
-        username={user.username}
-        tag={user.tag}
-        location={user.location}
-      ></Description>
-      <Stats
-        followers={user.stats.followers}
-        views={user.stats.views}
-        likes={user.stats.likes}
-      ></Stats>
+      <Container>
+        <Avatar src={avatar} alt="User avatar" width={150} />
+        <Username>{username}</Username>
+        <Tag>@{tag}</Tag>
+        <Location>{location}</Location>
+      </Container>
+      <StatsList>
+        <StatsItem>
+          <Label>Followers</Label>
+          <Quantity>{followers}</Quantity>
+        </StatsItem>
+        <StatsItem>
+          <Label>Views</Label>
+          <Quantity>{views}</Quantity>
+        </StatsItem>
+        <StatsItem>
+          <Label>Likes</Label>
+          <Quantity>{likes}</Quantity>
+        </StatsItem>
+      </StatsList>
     </Wrapper>
   );
 };
